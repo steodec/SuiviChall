@@ -73,8 +73,15 @@ public class SuiviChall implements ModInitializer {
     }
 
     private StringBuilder getAllLinesBefore(List<Text> lores, int index) {
+        boolean starting = false;
         StringBuilder allLinesBefore = new StringBuilder();
         for (int j = 0; j < index; j++) {
+            if (!starting) {
+                if (lores.get(j).getString().contains("Objectif")) {
+                    starting = true;
+                }
+                continue;
+            }
             allLinesBefore.append(lores.get(j).getString().trim());
             if (j < index - 1) {
                 allLinesBefore.append(" "); // Add a space between lines, you can replace with "\n" if you want them on separate lines
