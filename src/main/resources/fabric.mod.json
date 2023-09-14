@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "suivichall",
+  "version": "${version}",
+
+  "name": "SuiviChal",
+  "description": "Mod créer pour le skyblock SkySword",
+  "authors": [
+    "Steodec"
+  ],
+  "contact": {
+    "homepage": "https://humbrain.com/",
+    "sources": "https://github.com/steodec/SuiviChall"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/suivichall/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.humbrain.suivichall.SuiviChall"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric-api": "*",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
